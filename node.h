@@ -1,10 +1,12 @@
 #pragma once
 #include<iostream>
 
+//Could possibly make a rootnode struct that does not have a value and is constant
 typedef struct node
 {
     int number;
-    struct node* next;
+    struct node* up;
+    struct node* down;
 } node;
 
 
@@ -12,6 +14,6 @@ typedef struct node
 /// @param root 
 /// @param val 
 /// @return Returns a pointer to the newly created prepended node
-node* addNode(struct node* root, int val);
+void addNode(node *proot, int val);
 
 int search(struct node* root, int val);

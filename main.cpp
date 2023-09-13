@@ -3,13 +3,16 @@
 
 int main(int argc, char* argv[])
 {
-    node* root = NULL;
+    //Pointer to root node. root is NOT the root node
+    node* root = new node();
+    root->up = nullptr;
+    root->down = nullptr;
+    root->number = 0;
+
+    //Start i at i = 1 to ignore first cmd arg which is the .exe name
     for (int i = 1; i < argc; i++)
     {
-        int number = atoi(argv[i]);
-        root = addNode(root, number);
+        addNode(root, atoi(argv[i]));
     }
-    search(root, 3);
-    
     return 0;
 }
