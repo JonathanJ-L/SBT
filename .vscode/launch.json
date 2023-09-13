@@ -11,6 +11,8 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
+            //Still need to make this path relative to make the .exe file
+            //runable
             "miDebuggerPath": "L:\\msys2\\ucrt64\\bin\\gdb.exe",
             "setupCommands": [
                 {

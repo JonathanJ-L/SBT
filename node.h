@@ -9,11 +9,18 @@ typedef struct node
     struct node* down;
 } node;
 
+node* createRoot();
+node* createRoot(int val);
 
-/// @brief Prepends a node between 'root' with number = 'val'
-/// @param root 
+/// @brief Adds a node to rtnode, UP if val is greater and DOWN if val is lower.
+/// Continues till a free space is found
+/// @param rtnode
 /// @param val 
-/// @return Returns a pointer to the newly created prepended node
-void addNode(node *proot, int val);
+void addNode(node *rtnode, int val);
 
-int search(struct node* root, int val);
+
+/// @brief Searches for a value(val) starting from (rtnode) descending.
+/// @param rtnode - The starting node of the search
+/// @param val    - The value to search for
+/// @return Returns 1 if it succeeded finding val, 0 if it failed
+int search(struct node* rtnode, int val);
